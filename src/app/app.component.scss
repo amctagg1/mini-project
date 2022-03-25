@@ -1,15 +1,23 @@
 @import '../styles.scss';
 
 header {
-    height: 6.5625rem; // 105px
+    min-height: 6.5625rem; // 105px
     color: $header-text;
     background: $header-bg url(../assets/rm-hero.svg) no-repeat center;
     background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1em;
 
     @media (min-width: 767px) {
-        height: 15.625rem; // 250px
+        min-height: 15.625rem; // 250px
+    }
+
+    h1 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        margin: 0;
+        text-align: center;
     }
 }

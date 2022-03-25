@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Resets
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+// Colors
+
 :root {
     // Colors - Tier 1
     --white: hsl(0, 0%, 100%);
@@ -19,6 +30,9 @@ $body-bg: var(--bg-gray-15);
 $body-text: var(--text-white); 
 $header-bg: var(--bg-white);
 $header-text: var(--text-gray-18);
+
+
+// Template
 
 body {
     background: $body-bg;
