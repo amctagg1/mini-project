@@ -1,0 +1,15 @@
+@import '../styles.scss';
+
+header {
+    height: 6.5625rem; // 105px
+    color: $header-text;
+    background: $header-bg url(../assets/rm-hero.svg) no-repeat center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 767px) {
+        height: 15.625rem; // 250px
+    }
+}

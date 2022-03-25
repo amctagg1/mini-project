@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    // Colors - Tier 1
+    --white: hsl(0, 0%, 100%);
+    --gray-18: hsl(218, 12%, 18%);
+    --gray-15: hsl(206, 21%, 15%);
+
+
+    // Colors - Tier 2
+    --bg-white: var(--white);
+    --bg-gray-15: var(--gray-15);
+    --text-white: var(--white);
+    --text-gray-18: var(--gray-18);
+}
+
+// Colors - Tier 3
+$body-bg: var(--bg-gray-15);
+$body-text: var(--text-white); 
+$header-bg: var(--bg-white);
+$header-text: var(--text-gray-18);
+
+body {
+    background: $body-bg;
+    color: $body-text;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px; // 1rem
+}
+
+h1 {
+    font-size: 1.953rem; // 31.25px
+
+    @media (min-width: 767px) {
+        font-size: 4rem; // 64px
+    }
+}
