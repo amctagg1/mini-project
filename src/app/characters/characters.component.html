@@ -1,10 +1,11 @@
 <section role="search" class="char-search">
-    <!-- label for="" and hidden? -->
+    <!-- accessibility: label for="" and hidden? -->
     <input name="name-search" class="char-search_input" placeholder="Search By Name" type="search" autocomplete="off" [(ngModel)]="searchTerm" />
     <button type="submit" class="btn-primary char-search_submit" (click)="getCharacters(1)">Search</button>
 </section>
 
-<table *ngIf="characterCall">
+<table *ngIf="characterCall" class=results-table>
+    <!-- accessibility: markup for table header and hide it? -->
     <tbody *ngIf="characterCall.results">
         <tr *ngFor="let c of characterCall.results" [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">
             <td>{{c.name}}</td>
