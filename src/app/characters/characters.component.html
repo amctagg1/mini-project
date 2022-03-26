@@ -9,6 +9,7 @@
 
 <table *ngIf="characterCall" class=results-table>
     <!-- accessibility: markup for table header and hide it? -->
+    <!-- also, table layout 'fixed' and column widths are set on each column header -->
     <tbody *ngIf="characterCall.results">
         <tr *ngFor="let c of characterCall.results">
             <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">{{c.name}}</a></td>
@@ -21,5 +22,7 @@
 
 
 <ng-container *ngIf="pages">
-    <span *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)">{{p}}</span>
+    <nav class="pagination" aria-label="Character pages">
+        <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)" class="pagination_page">{{p}}</a>
+    </nav>
 </ng-container>

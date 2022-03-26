@@ -155,6 +155,7 @@ input {
 .results-table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 2rem;
 
     tr {
         border: 1px solid $table-border;
@@ -191,6 +192,22 @@ input {
     &.padded {
         td {
             padding: .7em 1.1em;
+        }
+    }
+}
+
+.pagination {
+    text-align: center;
+    
+    &_page {
+        padding: .5em;
+        font-size: 0.875rem; // 14px
+        display: inline-block;
+        // consult with Design: the size of the pagination targets is smaller than the recommended 44 x 44 px
+
+        &:hover,
+        &:focus {
+            color: $body-text-purple;
         }
     }
 }

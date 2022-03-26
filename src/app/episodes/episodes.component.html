@@ -11,5 +11,7 @@
 </table>
 
 <ng-container *ngIf="pages">
-    <span *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}" (click)="getEpisodes(p)">{{p}}</span>
+    <nav class="pagination" aria-label="Character pages">
+        <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}" (click)="getEpisodes(p)" class="pagination_page">{{p}}</a>
+    </nav>
 </ng-container>
