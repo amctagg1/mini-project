@@ -19,15 +19,41 @@ export class EpisodesComponent implements OnInit {
   getEpisodes(page = 1): void {
     this.episodesService.getEpisodes(page).subscribe(episodes => {
       this.episodesCall = episodes;
-      this.fillInPageArray(episodes.info.pages);
+      this.fillInPageArray(episodes.info.pages, page);
       this.currentPage = page;
     });
   }
 
-  fillInPageArray(total: number): void {
+  fillInPageArray(total: number, current: number): void {
     this.pages = [] as number[];
 
-    for (let counter = 1; counter <= total; counter++) {
+    // display up to 6 pagination links at a time
+    
+    let fromArray: number;
+    if(current == 1 || current == 2) {
+      fromArray = 1;
+    } else if (total <= 5) {
+      fromArray = 1;
+    } else if (total - current <= 2) {
+      fromArray = total - 5;
+    } else {
+      fromArray = current - 2;
+    }
+
+    let toArray: number;
+    if (total <= 6) {
+      toArray = total;
+    } else if (current == 1 || current == 2) {
+      toArray = 6;
+    } else if(total - current <= 3) {
+      toArray = total;
+    } else {
+      toArray = current + 3;
+    }
+
+    console.log("t: " + total + " c: " + current + " fa: " + fromArray + " ta: " + toArray);
+
+    for (let counter = fromArray; counter <= toArray; counter++) {
       this.pages.push(counter);
     }
   }
