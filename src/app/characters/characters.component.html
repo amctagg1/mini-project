@@ -1,28 +1,31 @@
-<section role="search" class="char-search">
-    <!-- should this be wrapped in a form? -->
-    <!-- accessibility: label for="" and hidden? -->
-    <input name="name-search" class="char-search_input" placeholder="Search By Name" type="search" autocomplete="off" [(ngModel)]="searchTerm" />
-    <button type="submit" class="btn-primary char-search_submit" (click)="getCharacters(1)">Search</button>
-</section>
-
 <!-- h1 of this page should probably be "Rick and Morty Characters"-->
 
-<table *ngIf="characterCall" class=results-table>
-    <!-- accessibility: markup for table header and hide it? -->
-    <!-- also, table layout 'fixed' and column widths are set on each column header -->
-    <tbody *ngIf="characterCall.results">
-        <tr *ngFor="let c of characterCall.results">
-            <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">{{c.name}}</a></td>
-            <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.species}}</a></td>
-            <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.status}}</a></td>
-            <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.gender}}</a></td>
-        </tr>
-    </tbody>
-</table>
+<section aria-label="Rick and Morty Characters">
 
+    <section role="search" class="char-search" aria-label="Character search">
+        <!-- should this be wrapped in a form? -->
+        <!-- accessibility: label for="" and hidden? -->
+        <input name="name-search" class="char-search_input" placeholder="Search By Name" type="search" autocomplete="off" [(ngModel)]="searchTerm" />
+        <button type="submit" class="btn-primary char-search_submit" (click)="getCharacters(1)">Search</button>
+    </section>
 
-<ng-container *ngIf="pages">
-    <nav class="pagination" aria-label="Character pages">
-        <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)" class="pagination_page">{{p}}</a>
-    </nav>
-</ng-container>
+    <table *ngIf="characterCall" class=results-table aria-label="Character list">
+        <!-- accessibility: markup for table header and hide it? -->
+        <!-- also, table layout 'fixed' and column widths are set on each column header -->
+        <tbody *ngIf="characterCall.results">
+            <tr *ngFor="let c of characterCall.results">
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">{{c.name}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.species}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.status}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.gender}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-container *ngIf="pages">
+        <nav class="pagination" aria-label="Character pages">
+            <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)" class="pagination_page">{{p}}</a>
+        </nav>
+    </ng-container>
+
+</section>

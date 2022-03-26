@@ -1,17 +1,21 @@
 <!-- h1 of this page should probably be "Rick and Morty Characters"-->
 
-<table class="results-table padded">
-    <!-- accessibility: markup for table header and hide it? -->
-    <tbody *ngIf="episodesCall?.results">
-        <tr *ngFor="let e of episodesCall.results">
-            <td>{{e.name}}</td>
-            <td>{{e.episode}}</td>
-        </tr>
-    </tbody>
-</table>
+<section aria-label="Rick and Morty Episodes">
 
-<ng-container *ngIf="pages">
-    <nav class="pagination" aria-label="Character pages">
-        <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}" (click)="getEpisodes(p)" class="pagination_page">{{p}}</a>
-    </nav>
-</ng-container>
+    <table class="results-table padded" aria-label="Episode list">
+        <!-- accessibility: markup for table header and hide it? -->
+        <tbody *ngIf="episodesCall?.results">
+            <tr *ngFor="let e of episodesCall.results">
+                <td>{{e.name}}</td>
+                <td>{{e.episode}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-container *ngIf="pages">
+        <nav class="pagination" aria-label="Episode pages">
+            <a href="JavaScript:Void(0);" *ngFor="let p of pages" [ngClass]="{'active': (p===currentPage)}" (click)="getEpisodes(p)" class="pagination_page">{{p}}</a>
+        </nav>
+    </ng-container>
+
+</section>
