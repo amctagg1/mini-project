@@ -1,1 +1,30 @@
-div.individual div.card { margin: 0px auto; width: 300px; }
+@import '../../styles.scss';
+
+.card {
+    width: 100%;
+    max-width: 38.3125rem; // 613px
+    margin: 0 auto;
+    background: $card-bg;
+    border: 1px solid $card-border;
+    padding: 2.25rem 2.25rem 3.75rem; // 36px 36px 60px
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-img-top {
+        border-radius: 100px;
+        margin-bottom: 3.375rem; // 54px
+    }
+
+    &-title {
+        font-size: 2.25rem; // 36px
+        font-weight: 700;
+        margin-bottom: 3.0625rem; // 49px
+    }
+
+    &-subtitle {
+        font-size: 1.125rem; // 18px
+        display: flex;
+        justify-content: space-around;
+    }
+}

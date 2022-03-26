@@ -5,6 +5,8 @@
     <button type="submit" class="btn-primary char-search_submit" (click)="getCharacters(1)">Search</button>
 </section>
 
+<!-- h1 of this page should probably be "Rick and Morty Characters"-->
+
 <table *ngIf="characterCall" class=results-table>
     <!-- accessibility: markup for table header and hide it? -->
     <tbody *ngIf="characterCall.results">
