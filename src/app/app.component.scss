@@ -21,3 +21,31 @@ header {
         text-align: center;
     }
 }
+
+main {
+    padding: 2em 1.3em;
+    max-width: 62.75rem; // 1004px
+    margin: 0 auto;
+
+    @media (min-width: 767px) {
+        padding: 3.5em;
+    }
+}
+
+nav {
+    margin-bottom: 2rem; // 32px
+
+    @media (min-width: 767px) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4.875rem; // 78px
+    }
+}
+
+.nav-link {
+    font-size: 2rem; // 32px
+    padding: 0.2em;
+    margin: 0 1.3rem;
+    display: block;
+    text-align: center;
+}

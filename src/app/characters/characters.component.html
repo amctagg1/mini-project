@@ -1,6 +1,8 @@
-<input name="name-search" placeholder="Search By Name" type="text" autocomplete="off" [(ngModel)]="searchTerm" />
-
-<span (click)="getCharacters(1)">Search</span>
+<section role="search" class="char-search">
+    <!-- label for="" and hidden? -->
+    <input name="name-search" class="char-search_input" placeholder="Search By Name" type="search" autocomplete="off" [(ngModel)]="searchTerm" />
+    <button type="submit" class="btn-primary char-search_submit" (click)="getCharacters(1)">Search</button>
+</section>
 
 <table *ngIf="characterCall">
     <tbody *ngIf="characterCall.results">

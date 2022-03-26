@@ -16,6 +16,8 @@ html {
     --white: hsl(0, 0%, 100%);
     --gray-18: hsl(218, 12%, 18%);
     --gray-15: hsl(206, 21%, 15%);
+    --purple-primary: hsl(249, 80%, 67%);
+    --purple-accent: hsl(249, 80%, 69%);
 
 
     // Colors - Tier 2
@@ -23,6 +25,9 @@ html {
     --bg-gray-15: var(--gray-15);
     --text-white: var(--white);
     --text-gray-18: var(--gray-18);
+    --bg-purple: var(--purple-primary);
+    --bg-purple-accent: var(--purple-accent);
+
 }
 
 // Colors - Tier 3
@@ -30,6 +35,11 @@ $body-bg: var(--bg-gray-15);
 $body-text: var(--text-white); 
 $header-bg: var(--bg-white);
 $header-text: var(--text-gray-18);
+$btn-primary-bg: var(--bg-purple);
+$btn-primary-bg-hover: var(--bg-purple-accent);
+
+
+// To-Do: Define font size scale
 
 
 // Template
@@ -48,4 +58,58 @@ h1 {
     @media (min-width: 767px) {
         font-size: 4rem; // 64px
     }
+}
+
+a {
+    color: $body-text;
+    text-decoration: none;
+}
+
+a:hover {
+    // clarify hover state for links
+}
+
+a:active {
+    // clarify active state for links
+}
+
+a:focus {
+    // clarify focus state for links
+}
+
+button {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: .6em 2em;
+    
+    // clarify button states with Design
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+
+    &:focus {
+
+    }
+}
+
+.btn-primary {
+    background: $btn-primary-bg;
+    border: none;
+    color: $body-text;
+    font-size: 1.125rem; // 18px
+    padding: .6em 3em;
+
+    &:hover {
+        background: $btn-primary-bg-hover;
+    }
+}
+
+input {
+    border-radius: 6px;
+    padding: .6em;
+    border: none;
 }

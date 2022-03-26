@@ -1,0 +1,36 @@
+.char-search {
+    margin-bottom: 2.5rem;
+
+    &_input {
+        font-size: 1.125rem; // 18px
+        width: 100%;
+    }
+
+    &_submit {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+
+    @media (min-width: 767px) {
+
+        & {
+            display: flex;
+        }
+        
+
+        &_input {
+            width: auto;
+            flex-grow: 1;
+        }
+
+        &_submit {
+            width: auto;
+            margin-top: 0;
+            margin-left: 1rem;
+            padding: .6em 4.3em;
+        }
+    }
+
+}
+
