@@ -1,4 +1,5 @@
-<table class="results-table">
+<table class="results-table padded">
+    <!-- accessibility: markup for table header and hide it? -->
     <tbody *ngIf="episodesCall?.results">
         <tr *ngFor="let e of episodesCall.results">
             <td>{{e.name}}</td>

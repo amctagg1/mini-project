@@ -30,6 +30,7 @@ html {
     --bg-gray-15: var(--gray-15);
     --bg-purple: var(--purple-primary);
     --bg-purple-accent: var(--purple-accent);
+    --border-white: var(--white);
     --border-gray-25: var(--gray-25);
     --text-white: var(--white);
     --text-gray-18: var(--gray-18);
@@ -51,6 +52,7 @@ $btn-primary-bg-hover: var(--bg-purple-accent);
 $table-border: var(--border-gray-25);
 $table-bg: var(--bg-gray-20);
 $table-bg-hover: var(--bg-gray-25);
+$table-focus-border: var(--border-white);
 
 // Fonts
 
@@ -93,17 +95,21 @@ a {
     text-decoration: none;
 
     // clarify anchor states with Design
-    &:hover {
-
+    a:visited {
+        color: inherit;
     }
 
-    &:active {
+    &:hover {
 
     }
 
     a:focus {
 
     }
+
+    &:active {
+
+    } 
 }
 
 
@@ -156,15 +162,33 @@ input {
     }
 
     td {
-        padding: .7em 1.1em;
         background: $table-bg;
         transition: all .1s ease;       
     }
 
     tr:hover td,
-    tr:focus td {
+    tr:focus-within td {
         background: $table-bg-hover;
-        color: $body-text-purple;
+    }
+    
+    a {
+        display: flex;
+        padding: .7em 1.1em;
         cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    tr:hover a,
+    tr:focus-within a {
+        color: $body-text-purple;
+    }
+
+    &.padded {
+        td {
+            padding: .7em 1.1em;
+        }
     }
 }
