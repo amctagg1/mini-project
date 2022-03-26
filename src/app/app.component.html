@@ -5,8 +5,8 @@
 <main>
 
     <nav>
-        <a routerLink="/characters" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }" class="nav-link">Characters</a>
-        <a routerLink="/episodes" class="nav-link">Episode Guide</a>
+        <a routerLink="/characters" [queryParams]="{ fromPage : characterPage, nameSearch : characterNameSearch }" class="nav-link" routerLinkActive="nav-link_active">Characters</a>
+        <a routerLink="/episodes" class="nav-link" routerLinkActive="nav-link_active">Episode Guide</a>
     </nav>
 
     <router-outlet></router-outlet>

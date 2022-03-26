@@ -16,6 +16,7 @@ html {
     --white: hsl(0, 0%, 100%);
     --gray-18: hsl(218, 12%, 18%);
     --gray-15: hsl(206, 21%, 15%);
+    --gray-3: hsl(204, 3%, 68%);
     --purple-primary: hsl(249, 80%, 67%);
     --purple-accent: hsl(249, 80%, 69%);
 
@@ -25,6 +26,7 @@ html {
     --bg-gray-15: var(--gray-15);
     --text-white: var(--white);
     --text-gray-18: var(--gray-18);
+    --text-gray-3: var(--gray-3);
     --bg-purple: var(--purple-primary);
     --bg-purple-accent: var(--purple-accent);
 
@@ -33,6 +35,7 @@ html {
 // Colors - Tier 3
 $body-bg: var(--bg-gray-15);
 $body-text: var(--text-white); 
+$body-text-gray: var(--text-gray-3);
 $header-bg: var(--bg-white);
 $header-text: var(--text-gray-18);
 $btn-primary-bg: var(--bg-purple);
@@ -97,7 +100,7 @@ button {
 }
 
 .btn-primary {
-    background: $btn-primary-bg;
+    background: $btn-primary-bg; // clarify with Design: button doesn't pass contrast
     border: none;
     color: $body-text;
     font-size: 1.125rem; // 18px

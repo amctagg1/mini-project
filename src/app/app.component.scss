@@ -48,4 +48,11 @@ nav {
     margin: 0 1.3rem;
     display: block;
     text-align: center;
+    color: $body-text-gray;
+    transition: color .1s ease;
+
+    &:hover,
+    &_active {
+        color: $body-text;
+    }
 }
