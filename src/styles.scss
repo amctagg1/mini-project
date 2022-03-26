@@ -203,6 +203,9 @@ input {
         padding: .5em;
         font-size: 0.875rem; // 14px
         display: inline-block;
+        background: none;
+        border: none;
+        color: inherit;
         // consult with Design: the size of the pagination targets is smaller than the recommended 44 x 44 px
 
         &:hover,

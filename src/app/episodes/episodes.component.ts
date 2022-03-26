@@ -51,8 +51,6 @@ export class EpisodesComponent implements OnInit {
       toArray = current + 3;
     }
 
-    console.log("t: " + total + " c: " + current + " fa: " + fromArray + " ta: " + toArray);
-
     for (let counter = fromArray; counter <= toArray; counter++) {
       this.pages.push(counter);
     }
