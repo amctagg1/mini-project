@@ -41,6 +41,18 @@ $header-text: var(--text-gray-18);
 $btn-primary-bg: var(--bg-purple);
 $btn-primary-bg-hover: var(--bg-purple-accent);
 
+// Fonts
+
+@font-face {
+    font-family: "Gotham Pro Regular";
+    src: url('assets/Gotham\ Pro\ Regular.ttf');
+}
+
+@font-face {
+    font-family: "Gotham Pro Bold";
+    src: url('assets/Gotham\ Pro\ Bold.ttf');
+}
+
 
 // To-Do: Define font size scale
 
@@ -53,10 +65,12 @@ body {
     min-height: 100vh;
     margin: 0;
     font-size: 16px; // 1rem
+    font-family: "Gotham Pro Regular", sans-serif;
 }
 
 h1 {
     font-size: 1.953rem; // 31.25px
+    font-family: "Gotham Pro Bold", sans-serif;
 
     @media (min-width: 767px) {
         font-size: 4rem; // 64px
