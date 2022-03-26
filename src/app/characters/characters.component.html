@@ -24,7 +24,7 @@
 
     <ng-container *ngIf="pages">
         <nav class="pagination" aria-label="Character pages">
-            <button *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)" class="pagination_page">{{p}}</button>
+            <button *ngFor="let p of pages" [ngClass]="{'active': (p === currentPage)}" (click)="getCharacters(p)" class="pagination_page"><span class="sr-only">Page </span>{{p}}</button>
         </nav>
     </ng-container>
 
