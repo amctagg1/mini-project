@@ -12,10 +12,10 @@
     <table *ngIf="characterCall" class=results-table aria-label="Character list">
         <!-- col definitions to set column widths in CSS -->
         <colgroup>
-            <col>
-            <col>
-            <col>
-            <col>
+            <col class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
         </colgroup>
         <!-- table header for screen reader accessibility -->
         <thead class="sr-only">
@@ -29,9 +29,9 @@
         <tbody *ngIf="characterCall.results">
             <tr *ngFor="let c of characterCall.results">
                 <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">{{c.name}}</a></td>
-                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.species}}</a></td>
-                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.status}}</a></td>
-                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1">{{c.gender}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1" class="col-hide-sm">{{c.species}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1" class="col-hide-sm">{{c.status}}</a></td>
+                <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }" tabindex="-1" class="col-hide-sm">{{c.gender}}</a></td>
             </tr>
         </tbody>
     </table>
