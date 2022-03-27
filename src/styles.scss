@@ -183,8 +183,6 @@ input {
         }
     }
 
-    
-
     @media (min-width: 767px) {
 
         .col-1 {
@@ -208,6 +206,9 @@ input {
     td {
         background: $table-bg;
         transition: all .1s ease;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     tr:hover td,

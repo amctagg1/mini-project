@@ -3,11 +3,22 @@
 <section aria-label="Rick and Morty Episodes">
 
     <table class="results-table padded" aria-label="Episode list">
-        <!-- accessibility: markup for table header and hide it? -->
+        <!-- col definitions to set column widths in CSS -->
+        <colgroup>
+            <col class="col-1">
+            <col class="col-2">
+        </colgroup>
+        <!-- table header for screen reader accessibility -->
+        <thead class="sr-only">
+            <tr>
+                <th>Episode Title</th>
+                <th>Episode Number</th>
+            </tr>
+        </thead>
         <tbody *ngIf="episodesCall?.results">
             <tr *ngFor="let e of episodesCall.results">
                 <td>{{e.name}}</td>
-                <td>{{e.episode}}</td>
+                <td class="col-hide-sm">{{e.episode}}</td>
             </tr>
         </tbody>
     </table>
