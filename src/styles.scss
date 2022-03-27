@@ -69,9 +69,6 @@ $card-border: var(--border-gray-25);
 }
 
 
-// To-Do: Define font size scale
-
-
 // Template
 
 body {
@@ -158,26 +155,29 @@ input {
     margin-bottom: 2rem;
     table-layout: fixed;
 
-    &_col-1 {
+    col:nth-of-type(1) {
+        // column 1
         width: 40%;
     }
 
-    &_col-2,
-    &_col-3,
-    &_col-4
-        {
+    col:nth-of-type(2),
+    col:nth-of-type(3),
+    col:nth-of-type(4) {
+        // columns 2, 3, 4
         width: 20%;
     }
 
     @media (min-width: 767px) {
-        &_col-1 {
+        
+        col:nth-of-type(1) {
+            // column 1
             width: 58%;
         }
-    
-        &_col-2,
-        &_col-3,
-        &_col-4
-         {
+
+        col:nth-of-type(2),
+        col:nth-of-type(3),
+        col:nth-of-type(4) {
+            // columns 2, 3, 4
             width: 14%;
         }
     }
