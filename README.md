@@ -5,10 +5,10 @@
 ### Design
 
 The provided Figma mockups have been applied to the Rick and Morty site. There were a few aspects of the design that warrant further discussion:
-- The 'Search' button (white text on purple background) does not pass color contrast.
-- Pages do not have unique and meaningful `<h1>` headers, which are important both for SEO and accessibility. (The `<h1>` is repeated as "The Rick and Morty" on ever page, which is not recommended.)
-- The pagination links are smaller than the recommended minimum size for click targets (44 x 44 px).
-- Links and buttons need clarification regarding the desired UI in focus / hover / active states.
+- The 'Search' button (white text on purple background) does not pass color contrast. I would recommend darkening the shade of purple until it passes contrast.
+- Pages do not have unique and meaningful `<h1>` headers, which are important both for SEO and accessibility. (The `<h1>` is repeated as "The Rick and Morty" on ever page, which is not recommended.) I would recommend that the `<h1>` instead be the name of that specific page ("Characters", "Episodes", "Rick Sanchez", etc.).
+- The pagination links are smaller than the recommended minimum size for click targets (44 x 44 px). I would recommend increasing the font size and padding.
+- Links and buttons need clarification regarding the desired UI in focus / hover / active states. These could not be determined from the mockup.
 - Table rows `<tr>` do not support the border-radius property. This aspect of the design would likely require major re-work to the markup structure of the table. (Perhaps using generic `<div>` structure instead of a `<table>`.) For now, I left the border-radius out of the site.
 
 ### Responsive
