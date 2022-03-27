@@ -156,6 +156,31 @@ input {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 2rem;
+    table-layout: fixed;
+
+    &_col-1 {
+        width: 40%;
+    }
+
+    &_col-2,
+    &_col-3,
+    &_col-4
+        {
+        width: 20%;
+    }
+
+    @media (min-width: 767px) {
+        &_col-1 {
+            width: 58%;
+        }
+    
+        &_col-2,
+        &_col-3,
+        &_col-4
+         {
+            width: 14%;
+        }
+    }
 
     tr {
         border: 1px solid $table-border;
@@ -166,7 +191,7 @@ input {
 
     td {
         background: $table-bg;
-        transition: all .1s ease;       
+        transition: all .1s ease;
     }
 
     tr:hover td,
@@ -178,6 +203,10 @@ input {
         display: flex;
         padding: .7em 1.1em;
         cursor: pointer;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &:focus {
             outline: none;

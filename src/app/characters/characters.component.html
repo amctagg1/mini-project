@@ -12,6 +12,14 @@
     <table *ngIf="characterCall" class=results-table aria-label="Character list">
         <!-- accessibility: markup for table header and hide it? -->
         <!-- also, table layout 'fixed' and column widths are set on each column header -->
+        <thead class="sr-only">
+            <tr>
+                <th class="results-table_col-1">Character Name</th>
+                <th class="results-table_col-2">Species</th>
+                <th class="results-table_col-3">Status</th>
+                <th class="results-table_col-4">Gender</th>
+            </tr>
+        </thead>
         <tbody *ngIf="characterCall.results">
             <tr *ngFor="let c of characterCall.results">
                 <td><a [routerLink]="['/character', c.id]" [queryParams]="{ fromPage : currentPage, nameSearch : searchTerm }">{{c.name}}</a></td>
