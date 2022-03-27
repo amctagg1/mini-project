@@ -11,12 +11,23 @@ The provided Figma mockups have been applied to the Rick and Morty site. There w
 - Links and buttons need clarification regarding the desired UI in focus / hover / active states.
 - Table rows `<tr>` do not support the border-radius property. This aspect of the design would likely require major re-work to the markup structure of the table. (Perhaps using generic `<div>` structure instead of a `<table>`.) For now, I left the border-radius out of the site.
 
+### Responsive
+
+The site is responsive for tablet and phone sizes. 
+- The header wraps its text and grows in height to avoid an overflow.
+- The site navigation stacks at mobile sizes.
+- The search bar and search button become full-with at mobile sizes.
+- Table cells truncate long text with an ellipsis.
+- On mobile, secondary table cells are hidden.
+
 ### Accessibility
 
 Many adjustments to the markup were made to ensure that the site is accessible. 
 - The table rows were not keyboard accessible. Now each row can be focused with TAb and its link visited with Enter.
 - The table was missing required header names for screen readers. Now there are are column names that are hidden from view.
 - The pagination links were not keyboard accessible. Now each row can be focused with TAb and its link visited with Enter.
+- HTML landmarks wrap all site content (`<header>`, `<main>`, `<section>`, `<nav>`, etc.).
+- Aria labels name relevant landmarks for users of screen readers.
   
 ### Challenges
   
